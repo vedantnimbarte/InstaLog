@@ -1,7 +1,7 @@
 export type LogFormatter = (
   timestamp: string,
   level: string,
-  message: string
+  message: string,
 ) => string;
 
 export interface LogEntry {
