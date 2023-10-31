@@ -2,7 +2,8 @@
   "name": "instalog",
   "version": "1.0.0",
   "description": "InstaLog is a highly configurable and modular logging library for Node.js. It provides flexibility in handling log messages, with support for various transports, custom log levels, and customizable log message formatting. Whether you want to log messages to files, databases, Elasticsearch, Fluentd, or the console, InstaLog has you covered.",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "src/types.ts",
   "scripts": {
     "start": "npm run build && node ./build/index.js",
     "start:dev": "nodemon",
@@ -10,10 +11,11 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*ts --fix",
     "format": "prettier --write .",
-    "postinstall": "husky install"
+    "prepare": "husky install",
+    "postinstall": "npm run prepare"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vedant Nimbarte <nimbartevedant@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.8.9",
